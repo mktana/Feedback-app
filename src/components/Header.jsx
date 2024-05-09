@@ -1,6 +1,3 @@
-import React from 'react'
-//import PropTypes from 'prop-types'   //work on React v15
-
 function Header({text, bgColor, textColor}) {
     const headerStyles = {
         backgroundColor: bgColor,
@@ -21,9 +18,5 @@ Header.defaultProps = {
     bgColor: 'rgba(0,0,0,0.4)',
     textColor: '#ff6a95'
 }
-
-// Header.PropTypes = {
-//     text: PropTypes.string,
-// }
 
 export default Header
