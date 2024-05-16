@@ -1,22 +1,11 @@
 import { FaTimes } from 'react-icons/fa'
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import Card from "./shared/Card"
 function FeedbackItem({item, handleDelete}) {
-
-  // const handleClick = () => {
-  //   console.log(item.id);
-  // }
-
-  const handleClick = (id) => {
-    console.log(id);
-  }
-
   return (
     <Card >
         <div className='num-display'>{item.rating}</div>
-        {/* <button onClick={() => console.log(item.id)}  */}
-        {/* <button onClick={handleClick} */}
-        <button onClick={() => handleClick(item.id)}
+        <button onClick={() => handleDelete(item.id)}
         className="close">
           <FaTimes color='purple' />
         </button>
@@ -27,7 +16,7 @@ function FeedbackItem({item, handleDelete}) {
 }
 
 FeedbackItem.propTypes = {
-  item: propTypes.object.isRequired,
+  item: PropTypes.object.isRequired,
 }
 
 export default FeedbackItem
