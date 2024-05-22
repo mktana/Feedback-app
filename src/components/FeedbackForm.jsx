@@ -21,6 +21,7 @@ function FeedbackForm({handleAdd}) {
       setBtnDisabled(false)
     }
 
+    setRating(10)
     setText(e.target.value);
   };
 
